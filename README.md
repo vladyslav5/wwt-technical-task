@@ -25,6 +25,7 @@
 - React
 - Data fetching for filters - react-query
 - UI library with all necessary ready-made components - Chakra UI
+- i18n - Internationalization
 - State-manager - zustand // Use if necessary
 - All other technologies that we have installed
 
