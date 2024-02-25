@@ -18,9 +18,12 @@
   - If the user confirms - the data he selected should overwrite the data in `App`
   - If the user does not confirm, that is, says not to apply new changes, use old data
 - Display on `App` the data that the user selected in the form of JSON (without design, just to see that everything works)
+- Also, you can try minimizing re-renders using memorization and more proper approaches
+- Think about developing this test as if you were working on a part of a big project
 
 ### What technologies to use
 
+- Git with [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 - Semantic layout - HTML 5
 - React
 - Data fetching for filters - react-query
