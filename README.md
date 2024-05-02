@@ -34,7 +34,7 @@
 
 ### How to execute
 
-- Make a fork into a PRIVATE repository
+- Make a fork
 - Complete the task
 - Add @ltlaitoff to the fork for review
 - Write to the telegram chat or email that the task is completed
