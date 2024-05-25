@@ -7,7 +7,7 @@ import { FilterModal } from '@components/FilterModal/ui/FilterModal.tsx'
 
 export const App = () => {
 	const { t } = useTranslation()
-	const [isOpen, setIsOpen] = useState(false)
+	const [isOpen, setIsOpen] = useState(true)
 	const onShowModal = () => {
 		setIsOpen(true)
 	}

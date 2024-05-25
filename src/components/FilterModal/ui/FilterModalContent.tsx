@@ -39,6 +39,18 @@ const filterData = [
 				name: 'All inclusive',
 				description:
 					'Covers all meals and drinks during your stay, often including extra services or activities.'
+			},
+			{
+				id: 'all-inclusive1',
+				name: 'All inclusive',
+				description:
+					'Covers all meals and drinks during your stay, often including extra services or activities.'
+			},
+			{
+				id: 'all-inclsive',
+				name: 'All inclusive',
+				description:
+					'Covers all meals and drinks during your stay, often including extra services or activities.'
 			}
 		]
 	},

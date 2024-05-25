@@ -1,8 +1,17 @@
 import { FC } from 'react'
 
-import { Box, Checkbox, CheckboxGroup, Stack, Tooltip } from '@chakra-ui/react'
+import {
+	Box,
+	Checkbox,
+	CheckboxGroup,
+	Grid,
+	Text,
+	Tooltip
+} from '@chakra-ui/react'
 
 import { FilterOption } from '@components/FilterModal/types/filterOption.ts'
+import { textStyles } from '@providers/ThemeProvider/theme/base'
+import { checkboxTheme } from '@providers/ThemeProvider/theme/components'
 
 interface FilterItemProps {
 	// id:string
@@ -17,22 +26,30 @@ export const FilterItem: FC<FilterItemProps> = ({
 	description
 }) => {
 	return (
-		<Box>
-			<Tooltip label={description}>{name}</Tooltip>
+		<Box mt={'32px'}>
+			<Tooltip label={description}>
+				<Text {...textStyles['headline-5']}>{name}</Text>
+			</Tooltip>
 			<CheckboxGroup colorScheme="green">
-				<Stack
-					spacing={[1, 5]}
-					direction={['column', 'row']}
+				<Grid
+					templateColumns={'repeat(auto-fill, minmax(min-content,30%))'}
+					minWidth={'50%'}
+					gap={'16px'}
+					mb={'32px'}
+					mt={'24px'}
 				>
 					{options.map(({ id, name, description }) => (
 						<Checkbox
+							{...checkboxTheme}
 							value={id}
 							key={id}
 						>
-							<Tooltip label={description}>{name}</Tooltip>
+							<Tooltip label={description}>
+								<Text {...textStyles['body-text-6']}>{name}</Text>
+							</Tooltip>
 						</Checkbox>
 					))}
-				</Stack>
+				</Grid>
 			</CheckboxGroup>
 			<hr />
 		</Box>
