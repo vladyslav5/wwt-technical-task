@@ -1,33 +1,35 @@
 import { FC } from 'react'
 
-import { Box, Checkbox, CheckboxGroup, Stack, Text } from '@chakra-ui/react'
+import { Box, Checkbox, CheckboxGroup, Stack, Tooltip } from '@chakra-ui/react'
 
 import { FilterOption } from '@components/FilterModal/types/filterOption.ts'
 
 interface FilterItemProps {
 	// id:string
 	name: string
+	description?: string
 	options: FilterOption[]
 }
 
-export const FilterItem: FC<FilterItemProps> = ({ name, options }) => {
+export const FilterItem: FC<FilterItemProps> = ({
+	name,
+	options,
+	description
+}) => {
 	return (
 		<Box>
-			<Text>{name}</Text>
-			<CheckboxGroup
-				colorScheme="green"
-				defaultValue={['naruto', 'kakashi']}
-			>
+			<Tooltip label={description}>{name}</Tooltip>
+			<CheckboxGroup colorScheme="green">
 				<Stack
 					spacing={[1, 5]}
 					direction={['column', 'row']}
 				>
-					{options.map(({ id, name /*description*/ }) => (
+					{options.map(({ id, name, description }) => (
 						<Checkbox
-							key={id}
 							value={id}
+							key={id}
 						>
-							{name}
+							<Tooltip label={description}>{name}</Tooltip>
 						</Checkbox>
 					))}
 				</Stack>
