@@ -6,7 +6,7 @@ export interface SearchRequestFilterBase {
 }
 
 export interface SearchRequestOptions extends SearchRequestFilterBase {
-	type: FilterType.OPTION
+	type: FilterType /*.OPTION*/
 	optionsIds: string[]
 }
 

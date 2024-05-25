@@ -7,10 +7,12 @@ import {
 	ModalHeader
 } from '@chakra-ui/react'
 
+import { FilterChoose } from '@api/types/Filter'
+
 import { FilterItem } from '@components/FilterModal/ui/Filter/FilterItem.tsx'
 import { FilterModalFooter } from '@components/FilterModal/ui/FilterModalFooter.tsx'
 
-const filterData = [
+const filterData: FilterChoose[] = [
 	{
 		id: 'MEAL_OPTIONS',
 		name: 'Meal options',

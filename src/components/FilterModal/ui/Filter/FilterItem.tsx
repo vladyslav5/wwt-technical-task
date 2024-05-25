@@ -9,21 +9,15 @@ import {
 	Tooltip
 } from '@chakra-ui/react'
 
-import { FilterOption } from '@components/FilterModal/types/filterOption.ts'
+import { FilterChoose } from '@api/types/Filter'
+
 import { textStyles } from '@providers/ThemeProvider/theme/base'
 import { checkboxTheme } from '@providers/ThemeProvider/theme/components'
 
-interface FilterItemProps {
-	// id:string
-	name: string
-	description?: string
-	options: FilterOption[]
-}
-
-export const FilterItem: FC<FilterItemProps> = ({
+export const FilterItem: FC<FilterChoose> = ({
+	description,
 	name,
-	options,
-	description
+	options
 }) => {
 	return (
 		<Box mt={'32px'}>
