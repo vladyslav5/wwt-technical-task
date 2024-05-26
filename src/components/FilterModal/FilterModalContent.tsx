@@ -7,8 +7,8 @@ import {
 	ModalHeader
 } from '@chakra-ui/react'
 
-import { FilterItem } from '@components/FilterModal/ui/Filter/FilterItem.tsx'
-import { FilterModalFooter } from '@components/FilterModal/ui/FilterModalFooter.tsx'
+import { FilterItem } from '@components/FilterModal/Filter/FilterItem.tsx'
+import { FilterModalFooter } from '@components/FilterModal/FilterModalFooter.tsx'
 import useFilter from '@providers/Store/FilterStore.ts'
 
 export const FilterModalContent = () => {

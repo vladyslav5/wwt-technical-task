@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 
 import { Button, ModalFooter, Stack } from '@chakra-ui/react'
 
-import { ConfirmationModal } from '@components/ConfirmationModal/ConfirmationModal.tsx'
+import { ConfirmationModal } from '@components/ConfirmationModal/'
 import useFilter from '@providers/Store/FilterStore.ts'
 
 interface FilterModalFooterProps {

@@ -2,7 +2,7 @@ import { FC } from 'react'
 
 import { Modal, ModalOverlay } from '@chakra-ui/react'
 
-import { FilterModalContent } from '@components/FilterModal/ui/FilterModalContent.tsx'
+import { FilterModalContent } from '@components/FilterModal/FilterModalContent.tsx'
 
 interface FilterModalProps {
 	isOpen: boolean
