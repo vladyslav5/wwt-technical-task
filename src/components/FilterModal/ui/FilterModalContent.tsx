@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import {
@@ -12,17 +11,9 @@ import { FilterItem } from '@components/FilterModal/ui/Filter/FilterItem.tsx'
 import { FilterModalFooter } from '@components/FilterModal/ui/FilterModalFooter.tsx'
 import useFilter from '@providers/Store/FilterStore.ts'
 
-//
-// const filterData: FilterChoose[] =
-
 export const FilterModalContent = () => {
 	const { t } = useTranslation()
 	const { filters, check, reset } = useFilter()
-	console.log(filters)
-	useEffect(() => {
-		console.log('filter changed')
-	}, [filters])
-	// const filters : FilterChoose[]= []
 
 	return (
 		<ModalContent>
