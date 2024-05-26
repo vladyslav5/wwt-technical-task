@@ -17,7 +17,6 @@ export const App = () => {
 		const persist = localStorage.getItem(PERSIST_FLAG)
 		persist && loadFilters()
 	}, [])
-
 	const onShowModal = () => {
 		setIsOpen(true)
 	}
