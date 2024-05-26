@@ -12,7 +12,6 @@ export const FilterModalFooter: FC<FilterModalFooterProps> = ({ onReset }) => {
 	const [confirmation, setConfirmation] = useState(false)
 	const onApply = () => {
 		setConfirmation(true)
-		console.log('conf')
 	}
 	const { t } = useTranslation()
 	return (

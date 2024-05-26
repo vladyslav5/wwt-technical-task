@@ -11,6 +11,8 @@ import {
 	Stack
 } from '@chakra-ui/react'
 
+import useFilter from '@providers/Store/FilterStore.ts'
+
 interface ConfirmationModal {
 	isOpen: boolean
 	onClose: () => void
@@ -21,6 +23,15 @@ export const ConfirmationModal: FC<ConfirmationModal> = ({
 	onClose
 }) => {
 	const { t } = useTranslation()
+	const { saveFilters, restoreFilters } = useFilter()
+	const onApply = () => {
+		saveFilters()
+		onClose()
+	}
+	const onDiscard = () => {
+		restoreFilters()
+		onClose()
+	}
 	return (
 		<Modal
 			// closeOnOverlayClick={false}
@@ -48,7 +59,7 @@ export const ConfirmationModal: FC<ConfirmationModal> = ({
 							border={'2px solid #474747'}
 							px={'70px'}
 							py={'26px'}
-							// onClick={onReset}
+							onClick={onDiscard}
 						>
 							{t('Use old filter')}
 						</Button>
@@ -57,6 +68,7 @@ export const ConfirmationModal: FC<ConfirmationModal> = ({
 							borderRadius={'16'}
 							px={'70px'}
 							py={'26px'}
+							onClick={onApply}
 							backgroundColor={'#FF5F00'}
 						>
 							{t('Apply new filter')}
