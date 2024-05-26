@@ -1,8 +1,12 @@
+import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { Button, ModalFooter } from '@chakra-ui/react'
 
-export const FilterModalFooter = () => {
+interface FilterModalFooterProps {
+	onReset: () => void
+}
+export const FilterModalFooter: FC<FilterModalFooterProps> = ({ onReset }) => {
 	const { t } = useTranslation()
 	return (
 		<ModalFooter>
@@ -18,6 +22,7 @@ export const FilterModalFooter = () => {
 			<Button
 				color={'#078691'}
 				variant={'link'}
+				onClick={onReset}
 			>
 				{t('Clear all parameters')}
 			</Button>
