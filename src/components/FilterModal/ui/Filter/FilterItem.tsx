@@ -20,7 +20,12 @@ export const FilterItem: FC<FilterItemProps> = ({
 	return (
 		<Box mt={'32px'}>
 			<Tooltip label={description}>
-				<Text {...textStyles['headline-5']}>{name}</Text>
+				<Text
+					w={'fit-content'}
+					{...textStyles['headline-5']}
+				>
+					{name}
+				</Text>
 			</Tooltip>
 			<Grid
 				templateColumns={'repeat(auto-fill, minmax(min-content,30%))'}
